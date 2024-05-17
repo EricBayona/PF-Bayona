@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+body{
+    min-width:290px
+}
+
+:root{
+    --colorBoton: rgb(236, 153, 52);
+    --colorText:#111;
+    --colorHeader: #fff;
+    --colorFooter:#FFC27D;
+}
+/* CONTENEDOR HEADER */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.contenedorHeader{
+    display: flex;
+    background-color: var(--colorHeader);
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid var(--colorBoton);
+    
+}
+.contenedorLogo img{
+    max-width: 15.62rem;
+    filter: invert(1);
+}
+.contendorBusqueda input{
+    width: 35rem;
+    height: 2rem;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    
+}
+.fa-search{
+    background-color: var(--colorBoton);
+    padding:0.6rem 0.9rem;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+}
+.contenedorNav nav ul{
+    display: flex;
+    list-style: none;
+   
+}
+.contenedorNav nav ul li {
+    text-decoration: none;
+    margin-left: 2rem;
+}
+.liNav a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--colorText);
+}
+.liNav select{
+    border:none;
+    font-size: 1.1rem; 
+}
+.navResponsive{
+    display: none;
+}
+.navResponsive:hover{
+    padding-left: 7rem;
+    background-color: #fff;
+    border-radius: 18px 18px 0 0;
+}
+.navResponsive:hover .ulResponsive{
+    display: block;
+}
+.ulResponsive{
+    list-style: none;
+    position: absolute;
+    margin-left: -7rem;
+    margin-top: 1rem;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 0 0 18px 18px;
+    padding: 1rem;
+    
+}
+/* CONTENEDOR BANNERS */
+ .contenedorBanners{
+    width: 80%;
+    margin: 1rem auto ;
+    overflow: hidden;
+}
+.contenedorBanners ul{
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: movimiento 20s alternate infinite  ease-in-out;
+}
+.contenedorBanners li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+.contenedorBanners img{
+    width: 100%;
+    
+}
+@keyframes movimiento {
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+
+    40% {margin-left: -100%;}
+    70% {margin-left: -100%;}
+
+    80% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+
+/* SECCION OFERTAS */
+
+.tituloOfertas{
+    text-align: center;
+}
+
+.ofertas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(13rem, 1fr));
+    width:80%;
+    margin: 1rem auto; 
+}
+.itenOfertas {
+    margin: 0 auto;
+    
+}
+.itenOfertas:hover{
+    filter: brightness(1.3);
+}
+.itenOfertas img{
+    width: 5rem;
+    padding: 1rem 1rem  0 1rem;
+}
+.itenOfertas h3{
+    text-align: center;
+}
+.itenOfertas h4{
+    text-align: center;
+    color: blue;
+}
+
+/* CATEGORIAS */
+.categorias h2{
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+.contenedorCategorias{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    width: 80%;
+    margin: 3rem auto;
+    align-items: center;
+}
+.categoria{
+    padding: 0;
+    margin: 2rem auto;
+}
+.categoria img{
+    width: 15rem;
+}
+.categoria h2{
+    padding: 0rem;
+}
+/* FOOTER*/
+footer{
+    width: 80%;
+    margin: 5rem  auto 0;
+    background-color:var(--colorFooter);
+    border: 0.2rem solid var(--colorBoton);
+    font-size: 1.3rem;
+   
+}
+.datosFooter img{
+    width: 11.4rem;
+    filter: invert(1);
+}
+.contenedorFooter{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+.tituloFooter{
+    padding-top: 1.5rem;
+    padding-bottom: 1.9rem;
+}
+.atributoFooter{
+    padding-bottom: 0.2rem;
+}
+
+/* PAGINA ACCESO / REGISTRO */
+.contenedorFormularios{
+    display: flex;
+    flex-wrap: wrap;
+}
+#contenedorUsuario{
+    background-color:#FFD88A;
+    border: 3px solid #FF9434;
+    margin: 2rem auto;
+    padding:2rem 1rem 2rem 2rem ;
+    width:40%;
+}
+#contenedorUsuario input{
+    margin: 0.2rem 0 0.3rem 0;
+}
+.inputUsuario{
+    display: block;
+}
+#contenedorRegistro{
+    background-color:#FFD88A;
+    border: 3px solid #FF9434;
+    margin: 2rem auto;
+    padding:2rem 1rem 2rem 2rem ;
+    width:40%;
+}
+#contenedorRegistro input{
+    margin: 0.2rem 0 0.3rem 0;
+}
+.h2Form{
+    padding-bottom: 2rem;
+}
+/* PAGINA CATEGORIAS */
+.seccionCategorias{
+    margin: 3rem 2rem 2rem 0;
+}
+/* PAGINA CONTACTO */
+.imagen-contacto img{
+    width: 100%;
+    height: 50vh;
+}
+.direccion h3{
+    font-size: 2rem;
+}
+.direccion h4{
+    display: inline-block;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+.mapaPequeño{
+    display: none;
+}
+.mapa{
+    display: flex;
+    margin: 2rem 0 2rem 0;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+.contenedor-formulario{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.contenedorInputs input{
+    border-radius: 18px;
+    width: 50%;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+.contenedorInputs textarea{
+    border-radius: 18px;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1373px){
+    .contendorBusqueda input{
+        width: 15rem;}
+    .contenedorLogo img{
+        max-width: 11.62rem;
+    }
+    .ulResponsive{
+        display: none;
+    }
+}
+@media screen and (max-width: 1118px){
+    .contenedorNav{
+        display: none;
+    }
+    .navResponsive{
+        display: block;
+    }
+    .navResponsive{
+        padding: 1rem;;
+    }
+    .contenedorCategorias{
+        grid-template-columns: repeat(2,auto);
+    }
+    .contenedorFooter{
+        display: block;
+        text-align: center;
+        padding: 1.5rem 0 1.5rem  0 ;
+    }
+    .mapa{
+        display: block;
+        text-align:center;
+    }
+   
+    
+}
+@media screen and (max-width:616px){
+    .contenedorHeader{
+        display: block;
+    }
+    .ofertas{
+        grid-template-columns: repeat(auto-fill,minmax(9rem, 1fr));
+    }
+    .contenedorCategorias{
+        grid-template-columns: repeat(1,auto);
+    }
+    .ulResponsive{  
+        margin-left: 0rem;
+        margin-top: 1rem;}
+    .navResponsive:hover{
+        padding-left: 0rem;
+        width: 7.87rem;
+    
+    }
+    .mapaPequeño{
+        display: flex;
+        margin: 0 auto;
+    }
+    .mapaMediano{
+        display: none;
+    }
+    .contenedorInputs input{
+        width: 100%;
+    }
+    .contenedorInputs textarea{
+        border-radius: 18px;
+        width: 100%;
+    }
+}

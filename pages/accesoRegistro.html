@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Proyecto</title>
+</head>
+<body>
+    <!-- SECCION HEADER -->
+    <header>
+        <div class="contenedorHeader">
+            <div class="contenedorLogo">
+                <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
+            </div>
+            <div class="contendorBusqueda">
+                <input type="search" placeholder="  Buscar">
+                <a class="busll" href=""><i class="fa fa-search" aria-hidden="true"></i></a>   
+            </div>
+            <div class="contenedorNav">
+                <nav>
+                    <ul>
+                        <li class="liNav"><a href="../index.html">Inicio</a></li>
+                        <li class="liNav"><a href="categorias.html">Categorias</a></li>
+                        <li class="liNav"><a href="contacto.html">Contacto</a></li>
+                        <li class="liNav"><a href="compras.html">Mi carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navResponsive">
+                <a href="">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <ul class="ulResponsive">
+                        <li class="liNav"><a href="../index.html">Inicio</a></li>
+                        <li class="liNav"><a href="categorias.html">Categorias</a></li>
+                        <li class="liNav"><a href="contacto.html">Contacto</a></li>
+                        <li class="liNav"><a href="compras.html">Mi carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="contenedorFormularios">
+            <section id="contenedorUsuario">
+                <h2 class="h2Form">Ingresar:</h2>
+                <form class="Formusuario">
+                    <label for="correo">E-mail:</label>
+                    <input
+                        class="inputUsuario" type="email" id="correo" name="correo" required placeholder="usuario@email.com"
+                    />
+                    <label for="password">Contraseña:</label>
+                    <input
+                        class="inputUsuario" type="password" id="password"7 name="password" required placeholder="Contraseña"
+                    />
+                    <input type="submit" value="Ingresar" />
+                </form>
+            </section>
+            <section id="contenedorRegistro">
+                <h2 class="h2Form">Registrarse:</h2>
+                <form >
+                    <label for="nuevoUsuario">Usuario:</label>
+                    <input
+                        class="inputUsuario" type="text" id="nuevoUsuario" name="nuevoUsuario" required placeholder="Usuario"
+                    />
+                    <label for="nuevoCorreo">E-mail:</label>
+                    <input
+                        class="inputUsuario" type="email" id="nuevoCorreo" name="nuevoCorreo" required placeholder="usuario@email.com"
+                    />
+                    <input type="submit" value="Registrarse" />
+                    <p>
+                        Se enviará un enlace a tu dirección de correo electrónico para establecer una nueva contraseña.
+                        Anti-spam Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra política de privacidad.
+                    </p>
+                </form>
+            </section>
+        </article>
+
+
+
+    </main>
+
+
+    <!--SECCION FOOTER-->
+    <footer>
+        <div class="contenedorFooter">
+        <div class="datosFooter">
+            <li><a href=""><img src="../assets/logo.png" alt=""></a></li>
+            <li class="atributoFooter">Direccion: Aguilares-Tucuman</li>
+            <li class="atributoFooter">Tel. Fijo (03865) 4-12-123</li>
+            <li class="atributoFooter">Celular: (03865) 11-22-33</li>
+            <li class="atributoFooter">E-mail: proyecto@eric.com</li>
+        </div>
+        <div class="redesSocialesFooter">
+            <li><h2 class="tituloFooter">Redes Sociales</h2></li>
+            <li class="atributoFooter"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</a></li>
+            <li class="atributoFooter"><a href="https://wwww.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+            <li class="atributoFooter"><a href="https://wwww.youtube.com/" target="_blank"><i class="fa fa-youtube" aria-hidden="true"> YouTube </i></a></li>
+            <li class="atributoFooter"><a href="https://wwww.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> instagram</a></li>
+        </div>
+        <div>
+            <li><h2 class="tituloFooter">Enlases de Interes</h2></li>
+            <li class="atributoFooter"><a href="sobreNosotros.html">Sobre Nosotros</a></li>
+            <li class="atributoFooter"><a href="trabajaConNosotros.html">Trabaja con nosotros</a></li>
+            <li class="atributoFooter"><a href="contacto.html">Contacto</a></li>
+        </div>
+    </div>
+
+    </footer>
