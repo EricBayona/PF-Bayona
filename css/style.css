@@ -203,35 +203,13 @@ footer{
 }
 
 /* PAGINA ACCESO / REGISTRO */
-.contenedorFormularios{
-    display: flex;
-    flex-wrap: wrap;
+.formulario-acceso-registro{
+    margin: 3rem auto 12rem  auto;
+    width: 60%;
 }
-#contenedorUsuario{
-    background-color:#FFD88A;
-    border: 3px solid #FF9434;
-    margin: 2rem auto;
-    padding:2rem 1rem 2rem 2rem ;
-    width:40%;
-}
-#contenedorUsuario input{
-    margin: 0.2rem 0 0.3rem 0;
-}
-.inputUsuario{
-    display: block;
-}
-#contenedorRegistro{
-    background-color:#FFD88A;
-    border: 3px solid #FF9434;
-    margin: 2rem auto;
-    padding:2rem 1rem 2rem 2rem ;
-    width:40%;
-}
-#contenedorRegistro input{
-    margin: 0.2rem 0 0.3rem 0;
-}
-.h2Form{
-    padding-bottom: 2rem;
+.formulario-acceso-registro input{
+    margin-bottom: 1rem;
+    background-color: #e675182c;
 }
 /* PAGINA CATEGORIAS */
 .seccionCategorias{
