@@ -244,13 +244,13 @@ footer{
 }
 .contenedorInputs input{
     border-radius: 18px;
-    width: 50%;
+    width: 100%;
     height: 3rem;
     margin-bottom: 1rem;
 }
 .contenedorInputs textarea{
     border-radius: 18px;
-    width: 50%;
+    width: 100%;
 }
 
 
