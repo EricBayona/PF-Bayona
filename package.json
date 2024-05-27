@@ -1,0 +1,27 @@
+{
+  "name": "proyectocoder",
+  "version": "1.0.0",
+  "description": "Proyecto de Coder House",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricBayona/PreEntrega2Bayona.git"
+  },
+  "keywords": [
+    "proyecto",
+    "coder",
+    "html",
+    "css",
+    "sass",
+    "node"
+  ],
+  "author": "Eric Bayona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricBayona/PreEntrega2Bayona/issues"
+  },
+  "homepage": "https://github.com/EricBayona/PreEntrega2Bayona#readme"
+}
