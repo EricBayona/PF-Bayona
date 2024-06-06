@@ -253,7 +253,36 @@ $redes: (
     background-color: #e675182c;
 }
 /* PAGINA CATEGORIAS */
-
+.botones-categorias{
+    text-align: center;
+    ;
+    & button{
+        margin: 1rem 1rem;
+        padding: 0.2rem;
+        background-color: transparent;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        
+    }
+    & button:hover{
+        
+        background-color: #c243a2;
+        border-radius: 18px;
+    }
+}
+.productos-galletas{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
+    padding: 10px;
+    width:80%;
+    margin:auto;
+    text-align: center;
+    & img{
+        aspect-ratio: 1;
+        width: 8rem;
+    }
+}
 /* PAGINA CONTACTO */
 .imagen-contacto img{
     width: 100%;
@@ -368,6 +397,9 @@ $redes: (
     .contenedorInputs textarea{
         border-radius: 18px;
         width: 100%;
+    }
+    .botones-categorias{
+        text-align: start;
     }
 }
 
