@@ -20,6 +20,13 @@ body {
   --colorFooter:#FFC27D;
 }
 
+main {
+  background-image: radial-gradient(ellipse, rgb(77, 100, 248), rgb(237, 97, 250));
+}
+main form {
+  background-image: radial-gradient(ellipse, rgb(77, 100, 248), rgb(237, 97, 250));
+}
+
 /* CONTENEDOR HEADER */
 header {
   position: sticky;
@@ -104,7 +111,7 @@ header {
 /* CONTENEDOR BANNERS */
 .contenedorBanners {
   width: 80%;
-  margin: 1rem auto;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -190,168 +197,10 @@ header {
   display: grid;
   grid-template-columns: repeat(3, auto);
   width: 80%;
-  margin: 3rem auto;
+  margin: 0rem auto;
   align-items: center;
 }
 
-/* FOOTER*/
-footer {
-  width: 100%;
-  margin: 5rem auto 0;
-  background-color: var(--colorFooter);
-  border: 0.2rem solid var(--colorBoton);
-  font-size: 1.3rem;
-}
-
-.datosFooter img {
-  width: 11.4rem;
-  filter: invert(1);
-}
-
-.contenedorFooter {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  align-items: center;
-}
-
-.tituloFooter {
-  padding-top: 1.5rem;
-  padding-bottom: 1.9rem;
-}
-
-.atributoFooter {
-  padding-bottom: 0.5rem;
-}
-
-/* PAGINA ACCESO / REGISTRO */
-.formulario-acceso-registro {
-  margin: 3rem auto 12rem auto;
-  width: 60%;
-}
-
-.formulario-acceso-registro input {
-  margin-bottom: 1rem;
-  background-color: rgba(230, 117, 24, 0.1725490196);
-}
-
-/* PAGINA CATEGORIAS */
-.seccionCategorias {
-  margin: 3rem 2rem 2rem 0;
-}
-
-/* PAGINA CONTACTO */
-.imagen-contacto img {
-  width: 100%;
-  height: 50vh;
-}
-
-.direccion h3 {
-  font-size: 2rem;
-}
-
-.direccion h4 {
-  display: inline-block;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  font-size: 1.5rem;
-}
-
-.mapaPequeño {
-  display: none;
-}
-
-.mapa {
-  display: flex;
-  margin: 2rem 0 2rem 0;
-  justify-content: space-around;
-  font-size: 1.5rem;
-}
-
-.contenedor-formulario {
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-.contenedorInputs input {
-  border-radius: 18px;
-  width: 100%;
-  height: 3rem;
-  margin-bottom: 1rem;
-}
-
-.contenedorInputs textarea {
-  border-radius: 18px;
-  width: 100%;
-}
-
-@media screen and (max-width: 1373px) {
-  .contendorBusqueda input {
-    width: 15rem;
-  }
-  .contenedorLogo img {
-    max-width: 11.62rem;
-  }
-  .ulResponsive {
-    display: none;
-  }
-}
-@media screen and (max-width: 1118px) {
-  .contenedorNav {
-    display: none;
-  }
-  .navResponsive {
-    display: block;
-  }
-  .navResponsive {
-    padding: 1rem;
-  }
-  .contenedorCategorias {
-    grid-template-columns: repeat(2, auto);
-  }
-  .contenedorFooter {
-    display: block;
-    text-align: center;
-    padding: 1.5rem 0 1.5rem 0;
-  }
-  .mapa {
-    display: block;
-    text-align: center;
-  }
-}
-@media screen and (max-width: 616px) {
-  .contenedorHeader {
-    display: block;
-  }
-  .ofertas {
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-  }
-  .contenedorCategorias {
-    grid-template-columns: repeat(1, auto);
-  }
-  .ulResponsive {
-    margin-left: 0rem;
-    margin-top: 1rem;
-  }
-  .navResponsive:hover {
-    padding-left: 0rem;
-    width: 7.87rem;
-  }
-  .mapaPequeño {
-    display: flex;
-    margin: 0 auto;
-  }
-  .mapaMediano {
-    display: none;
-  }
-  .contenedorInputs input {
-    width: 100%;
-  }
-  .contenedorInputs textarea {
-    border-radius: 18px;
-    width: 100%;
-  }
-}
 .categoria-1 {
   padding: 0;
   margin: 2rem auto;
@@ -478,6 +327,35 @@ footer {
   padding: 0;
 }
 
+/* FOOTER*/
+footer {
+  width: 100%;
+  background-color: var(--colorFooter);
+  border: 0.2rem solid var(--colorBoton);
+  font-size: 1rem;
+}
+
+.datosFooter img {
+  width: 11.4rem;
+  filter: invert(1);
+}
+
+.contenedorFooter {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+}
+
+.tituloFooter {
+  padding-top: 1.5rem;
+  padding-bottom: 1.9rem;
+}
+
+.atributoFooter {
+  padding-bottom: 0.5rem;
+}
+
 .btn--bg--twitter {
   background-color: #55acee;
   border-radius: 18px;
@@ -504,6 +382,138 @@ footer {
   border-radius: 18px;
   color: #fff;
   padding: 3px;
+}
+
+/* PAGINA ACCESO / REGISTRO */
+.formulario-acceso-registro {
+  margin: 0 auto;
+  width: 60%;
+  height: 70vh;
+  padding-top: 6rem;
+}
+
+.formulario-acceso-registro input {
+  margin-bottom: 1rem;
+  background-color: rgba(230, 117, 24, 0.1725490196);
+}
+
+/* PAGINA CATEGORIAS */
+/* PAGINA CONTACTO */
+.imagen-contacto img {
+  width: 100%;
+  height: 50vh;
+}
+
+.direccion h3 {
+  font-size: 2rem;
+}
+
+.direccion h4 {
+  display: inline-block;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.mapaPequeño {
+  display: none;
+}
+
+.mapa {
+  display: flex;
+  margin: 2rem 0 2rem 0;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+
+.contenedor-formulario {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contenedorInputs input {
+  border-radius: 18px;
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contenedorInputs textarea {
+  border-radius: 18px;
+  width: 100%;
+}
+
+/* PAGINA COMPRAS */
+.main-compras {
+  height: 58vh;
+}
+
+@media screen and (max-width: 1373px) {
+  .contendorBusqueda input {
+    width: 15rem;
+  }
+  .contenedorLogo img {
+    max-width: 11.62rem;
+  }
+  .ulResponsive {
+    display: none;
+  }
+}
+@media screen and (max-width: 1118px) {
+  .contenedorNav {
+    display: none;
+  }
+  .navResponsive {
+    display: block;
+  }
+  .navResponsive {
+    padding: 1rem;
+  }
+  .contenedorCategorias {
+    grid-template-columns: repeat(2, auto);
+  }
+  .contenedorFooter {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+  .mapa {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 616px) {
+  .contenedorHeader {
+    display: block;
+  }
+  .ofertas {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+  .contenedorCategorias {
+    grid-template-columns: repeat(1, auto);
+  }
+  .ulResponsive {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+  .navResponsive:hover {
+    padding-left: 0rem;
+    width: 7.87rem;
+  }
+  .mapaPequeño {
+    display: flex;
+    margin: 0 auto;
+  }
+  .mapaMediano {
+    display: none;
+  }
+  .contenedorInputs input {
+    width: 100%;
+  }
+  .contenedorInputs textarea {
+    border-radius: 18px;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

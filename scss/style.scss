@@ -17,6 +17,20 @@ body{
     --colorHeader: #fff;
     --colorFooter:#FFC27D;
 }
+main{
+    background-image: radial-gradient(
+     ellipse,
+         rgb(77, 100, 248),
+         rgb(237, 97, 250)
+         );
+     & form{
+         background-image: radial-gradient(
+         ellipse,
+             rgb(77, 100, 248),
+             rgb(237, 97, 250)
+             );
+     }
+ }
 /* CONTENEDOR HEADER */
 header{
     position: sticky;
@@ -92,7 +106,7 @@ header{
 /* CONTENEDOR BANNERS */
  .contenedorBanners{
     width: 80%;
-    margin: 1rem auto ;
+    margin: 0 auto ;
     overflow: hidden;
 }
 .contenedorBanners ul{
@@ -162,17 +176,36 @@ header{
     display: grid;
     grid-template-columns: repeat(3,auto);
     width: 80%;
-    margin: 3rem auto;
+    margin: 0rem auto;
     align-items: center;
+}$width: 15rem;
+@for $i from 1 through 6 {
+  .categoria-#{$i} {
+    
+    padding: 0;
+    margin: 2rem auto;
+    aspect-ratio: 1;
+    box-shadow: 0 0 2px rgb(0,0,0,0.2);
+    transition: 200ms;
+  }
+  .categoria-#{$i}:hover{
+    translate: 0 -10px;
+    box-shadow: 0 10px 5px rgb(0,0,0,0.2);
+  }
+  .categoria-#{$i} img {
+    width: 15rem;
+  }
+  .categoria-#{$i} h2{
+    padding: 0;
+  }
 }
 
 /* FOOTER*/
 footer{
     width: 100%;
-    margin: 5rem  auto 0;
     background-color:var(--colorFooter);
     border: 0.2rem solid var(--colorBoton);
-    font-size: 1.3rem;
+    font-size: 1rem;
    
 }
 .datosFooter img{
@@ -192,20 +225,35 @@ footer{
 .atributoFooter{
     padding-bottom: 0.5rem;
 }
+$redes: (
+  twitter: #55acee,
+  facebook: #3a5795,
+  instagram: #bf2498,
+  youtube: rgb(199, 16, 19),
+);
+@each $red, $color in $redes {
+  .btn--bg--#{$red} {
+    background-color: $color;
+    border-radius: 18px;
+    color: #fff;
+    padding: 3px;
+    
+  }
+}
 
 /* PAGINA ACCESO / REGISTRO */
 .formulario-acceso-registro{
-    margin: 3rem auto 12rem  auto;
+    margin:0 auto;
     width: 60%;
+    height: 70vh;
+    padding-top: 6rem;
 }
 .formulario-acceso-registro input{
     margin-bottom: 1rem;
     background-color: #e675182c;
 }
 /* PAGINA CATEGORIAS */
-.seccionCategorias{
-    margin: 3rem 2rem 2rem 0;
-}
+
 /* PAGINA CONTACTO */
 .imagen-contacto img{
     width: 100%;
@@ -243,7 +291,10 @@ footer{
     border-radius: 18px;
     width: 100%;
 }
-
+/* PAGINA COMPRAS */
+.main-compras{
+    height: 58vh;
+}
 
 
 
@@ -320,41 +371,5 @@ footer{
     }
 }
 
-// implementar condicionales para el tamano del iframe(mapa) pag. contacto
-$width: 15rem;
-@for $i from 1 through 6 {
-  .categoria-#{$i} {
-    
-    padding: 0;
-    margin: 2rem auto;
-    aspect-ratio: 1;
-    box-shadow: 0 0 2px rgb(0,0,0,0.2);
-    transition: 200ms;
-  }
-  .categoria-#{$i}:hover{
-    translate: 0 -10px;
-    box-shadow: 0 10px 5px rgb(0,0,0,0.2);
-  }
-  .categoria-#{$i} img {
-    width: 15rem;
-  }
-  .categoria-#{$i} h2{
-    padding: 0;
-  }
-}
 
-$redes: (
-  twitter: #55acee,
-  facebook: #3a5795,
-  instagram: #bf2498,
-  youtube: rgb(199, 16, 19),
-);
-@each $red, $color in $redes {
-  .btn--bg--#{$red} {
-    background-color: $color;
-    border-radius: 18px;
-    color: #fff;
-    padding: 3px;
-    
-  }
-}
+
