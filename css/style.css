@@ -17,14 +17,28 @@ body {
   --colorBoton: rgb(236, 153, 52);
   --colorText:#111;
   --colorHeader: #fff;
-  --colorFooter:#FFC27D;
+  --colorFooter:#008B69;
+  --colorBorderFooter:#034837;
 }
 
 main {
-  background-image: radial-gradient(ellipse, rgb(77, 100, 248), rgb(237, 97, 250));
+  background-image: radial-gradient(ellipse, #4d64f8, #64FBD2);
 }
 main form {
-  background-image: radial-gradient(ellipse, rgb(77, 100, 248), rgb(237, 97, 250));
+  background-image: radial-gradient(ellipse, #276466, #329C9F);
+}
+
+.titulo-h2 {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.titulo-h2:hover {
+  background-color: #2980b9;
 }
 
 /* CONTENEDOR HEADER */
@@ -311,7 +325,7 @@ header {
 footer {
   width: 100%;
   background-color: var(--colorFooter);
-  border: 0.2rem solid var(--colorBoton);
+  border: 0.2rem solid var(--colorBorderFooter);
   font-size: 1rem;
 }
 
@@ -392,7 +406,7 @@ footer {
   cursor: pointer;
   color: #fff;
   font-style: oblique;
-  background-color: #f442dc;
+  background-color: #039569;
   border-radius: 5px;
   border: none;
 }
@@ -462,10 +476,11 @@ footer {
   background-color: var(--colorFooter);
 }
 .contenedor-formulario button {
-  background-color: #f442dc;
+  background-color: #039569;
   border-radius: 18px;
   margin-top: 0.5rem;
   padding: 0.5rem 1rem;
+  border: 2px solid var(--colorBorderFooter);
 }
 
 .contenedorInputs input {
@@ -504,28 +519,25 @@ footer {
     display: block;
     padding: 1rem;
   }
-  .contenedorCategorias {
-    grid-template-columns: repeat(2, auto);
-  }
-  .contenedorFooter {
-    display: block;
-    text-align: center;
-    padding: 1.5rem 0 1.5rem 0;
-  }
-  .mapa {
-    display: block;
-    text-align: center;
-  }
 }
+.contenedorCategorias {
+  grid-template-columns: repeat(2, auto);
+}
+
+.contenedorFooter {
+  display: block;
+  text-align: center;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.mapa {
+  display: block;
+  text-align: center;
+}
+
 @media screen and (max-width: 616px) {
   .contenedorHeader {
     display: block;
-  }
-  .ofertas {
-    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-  }
-  .contenedorCategorias {
-    grid-template-columns: repeat(1, auto);
   }
   .ulResponsive {
     margin-left: 0rem;
@@ -534,6 +546,12 @@ footer {
   .navResponsive:hover {
     padding-left: 0rem;
     width: 7.87rem;
+  }
+  .ofertas {
+    grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  }
+  .contenedorCategorias {
+    grid-template-columns: repeat(1, auto);
   }
   .formulario-acceso-registro {
     width: 100%;
@@ -545,12 +563,16 @@ footer {
   .mapaMediano {
     display: none;
   }
+  .imagen-contacto img {
+    height: 30vh;
+  }
   .contenedorInputs input {
     width: 100%;
   }
   .contenedorInputs textarea {
     border-radius: 18px;
     width: 100%;
+    height: 5rem;
   }
   .botones-categorias {
     display: none;
@@ -559,7 +581,7 @@ footer {
     display: block;
   }
   .btn-responsive-categorias select {
-    background-color: #f442dc;
+    background-color: #039569;
     padding: 1rem;
   }
 }
