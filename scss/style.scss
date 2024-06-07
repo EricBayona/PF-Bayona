@@ -34,17 +34,18 @@ main{
              );
      }
  }
- .titulo-h2{
-    background-color: $h2-background-color;
+ .titulo-h1{
+    background-color: $h1-background-color;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-.titulo-h2:hover {
-    background-color: $h2-hover-background-color;
+.titulo-h1:hover {
+    background-color: $h1-hover-background-color;
 }
 /* CONTENEDOR HEADER */
 header{
@@ -266,7 +267,7 @@ $redes: (
     margin-bottom: 1rem;
     background-color: var(--colorFooter)
     }
-    & h2{text-align: center;}
+    & h1{text-align: center;}
 }
 /* PAGINA CATEGORIAS */
 .botones-categorias{

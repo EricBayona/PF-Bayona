@@ -28,16 +28,17 @@ main form {
   background-image: radial-gradient(ellipse, #276466, #329C9F);
 }
 
-.titulo-h2 {
+.titulo-h1 {
   background-color: #3498db;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  text-align: center;
 }
 
-.titulo-h2:hover {
+.titulo-h1:hover {
   background-color: #2980b9;
 }
 
@@ -389,7 +390,7 @@ footer {
   margin-bottom: 1rem;
   background-color: var(--colorFooter);
 }
-.formulario-acceso-registro h2 {
+.formulario-acceso-registro h1 {
   text-align: center;
 }
 
