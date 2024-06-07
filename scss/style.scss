@@ -1,3 +1,5 @@
+@import "variables";
+
 *{
     margin: 0;
     padding: 0;
@@ -62,33 +64,38 @@ header{
     padding:0.6rem 0.9rem;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
+    cursor: pointer;
 }
 .contenedorNav nav ul{
     display: flex;
     list-style: none;
-   
+    cursor: pointer;
+        & li {
+            text-decoration: none;
+            margin-left: 2rem;
+        }
 }
-.contenedorNav nav ul li {
-    text-decoration: none;
-    margin-left: 2rem;
-}
-.liNav a{
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: var(--colorText);
-}
-.liNav select{
-    border:none;
-    font-size: 1.1rem; 
-}
+
+.liNav {
+    & a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        color: var(--colorText);
+        }
+    & select{
+        border:none;
+        font-size: 1.1rem; 
+    }
+}    
 .navResponsive{
     display: none;
+    & .navResponsive:hover{
+        padding-left: 7rem;
+        background-color: #fff;
+        border-radius: 18px 18px 0 0;
+    }
 }
-.navResponsive:hover{
-    padding-left: 7rem;
-    background-color: #fff;
-    border-radius: 18px 18px 0 0;
-}
+
 .navResponsive:hover .ulResponsive{
     display: block;
 }
@@ -105,24 +112,23 @@ header{
 }
 /* CONTENEDOR BANNERS */
  .contenedorBanners{
-    width: 80%;
-    margin: 0 auto ;
-    overflow: hidden;
-}
-.contenedorBanners ul{
-    display: flex;
-    padding: 0;
-    width: 300%;
-    animation: movimiento 20s alternate infinite  ease-in-out;
-}
-.contenedorBanners li{
-    width: 100%;
-    list-style: none;
-    position: relative;
-}
-.contenedorBanners img{
-    width: 100%;
-    
+        width: 80%;
+        margin: 0 auto ;
+        overflow: hidden;
+    &  ul{
+        display: flex;
+        padding: 0;
+        width: 300%;
+        animation: movimiento 20s alternate infinite  ease-in-out;
+        }
+    & li{
+            width: 100%;
+            list-style: none;
+            position: relative;
+        }
+    & img{
+            width: 100%;    
+        }
 }
 @keyframes movimiento {
     0% {margin-left: 0;}
@@ -140,7 +146,6 @@ header{
 .tituloOfertas{
     text-align: center;
 }
-
 .ofertas{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(13rem, 1fr));
@@ -149,23 +154,21 @@ header{
 }
 .itenOfertas {
     margin: 0 auto;
-    
+    & img{
+        width: 5rem;
+        padding: 1rem 1rem  0 1rem;
+    }
+    & h3{
+        text-align: center;
+    }
+    & h4{
+        text-align: center;
+        color:#ffffff;
+    }
+    & :hover{
+        filter: brightness(1.3);
+    }
 }
-.itenOfertas:hover{
-    filter: brightness(1.3);
-}
-.itenOfertas img{
-    width: 5rem;
-    padding: 1rem 1rem  0 1rem;
-}
-.itenOfertas h3{
-    text-align: center;
-}
-.itenOfertas h4{
-    text-align: center;
-    color: blue;
-}
-
 /* CATEGORIAS */
 .categorias h2{
     text-align: center;
@@ -178,25 +181,24 @@ header{
     width: 80%;
     margin: 0rem auto;
     align-items: center;
-}$width: 15rem;
+}
 @for $i from 1 through 6 {
   .categoria-#{$i} {
-    
     padding: 0;
     margin: 2rem auto;
     aspect-ratio: 1;
     box-shadow: 0 0 2px rgb(0,0,0,0.2);
     transition: 200ms;
+    &  img {
+        width: 15rem;
+      }
+    &  h2{
+        padding: 0;
+      }  
   }
   .categoria-#{$i}:hover{
     translate: 0 -10px;
     box-shadow: 0 10px 5px rgb(0,0,0,0.2);
-  }
-  .categoria-#{$i} img {
-    width: 15rem;
-  }
-  .categoria-#{$i} h2{
-    padding: 0;
   }
 }
 
@@ -247,10 +249,11 @@ $redes: (
     width: 60%;
     height: 70vh;
     padding-top: 6rem;
-}
-.formulario-acceso-registro input{
+    & input{
     margin-bottom: 1rem;
-    background-color: #e675182c;
+    background-color: var(--colorFooter)
+    }
+    & h2{text-align: center;}
 }
 /* PAGINA CATEGORIAS */
 .botones-categorias{
@@ -258,19 +261,26 @@ $redes: (
     ;
     & button{
         margin: 1rem 1rem;
-        padding: 0.2rem;
+        padding: 14px 28px;
         background-color: transparent;
         border: none;
         font-size: 1rem;
         cursor: pointer;
-        
+        color: #fff;
+        font-style: oblique;
+        background-color: $botones;
+        border-radius: 5px;
+        border: none; 
     }
     & button:hover{
+        filter: drop-shadow(2px 4px 6px black);
         
-        background-color: #c243a2;
-        border-radius: 18px;
     }
 }
+.articulosPORSeccion h2{
+    text-align: center;
+    margin: 2rem 0;
+ }
 .productos-galletas{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(15rem, 1fr));
@@ -283,19 +293,24 @@ $redes: (
         width: 8rem;
     }
 }
+.btn-responsive-categorias{
+    display: none;
+}
 /* PAGINA CONTACTO */
 .imagen-contacto img{
     width: 100%;
     height: 50vh;
 }
-.direccion h3{
-    font-size: 2rem;
-}
-.direccion h4{
-    display: inline-block;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    font-size: 1.5rem;
+.direccion {
+    & h3{
+        font-size: 2rem;
+    }
+    & h4{
+        display: inline-block;
+        padding-right: 1rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
 }
 .mapaPequeño{
     display: none;
@@ -309,20 +324,35 @@ $redes: (
 .contenedor-formulario{
     text-align: center;
     font-size: 1.5rem;
+    max-width: 70%;
+    margin: 0 auto;
+    & input{
+        background-color: var(--colorFooter);
+    }
+    & textarea{
+        background-color: var(--colorFooter);
+    }
+    & button{
+        background-color: $botones;
+        border-radius: 18px;
+        margin-top: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
 }
 .contenedorInputs input{
     border-radius: 18px;
     width: 100%;
     height: 3rem;
     margin-bottom: 1rem;
-}
-.contenedorInputs textarea{
-    border-radius: 18px;
-    width: 100%;
+    & textarea{
+        border-radius: 18px;
+        width: 100%;
+    }
 }
 /* PAGINA COMPRAS */
 .main-compras{
-    height: 58vh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -347,9 +377,7 @@ $redes: (
     }
     .navResponsive{
         display: block;
-    }
-    .navResponsive{
-        padding: 1rem;;
+        padding: 1rem;
     }
     .contenedorCategorias{
         grid-template-columns: repeat(2,auto);
@@ -384,6 +412,9 @@ $redes: (
         width: 7.87rem;
     
     }
+    .formulario-acceso-registro{
+        width: 100%;
+    }
     .mapaPequeño{
         display: flex;
         margin: 0 auto;
@@ -391,15 +422,25 @@ $redes: (
     .mapaMediano{
         display: none;
     }
-    .contenedorInputs input{
+    .contenedorInputs {
+        & input{
         width: 100%;
-    }
-    .contenedorInputs textarea{
-        border-radius: 18px;
-        width: 100%;
+            }
+        & textarea{
+            border-radius: 18px;
+            width: 100%;
+            } 
     }
     .botones-categorias{
-        text-align: start;
+        display: none;
+        
+    }
+    .btn-responsive-categorias{
+        display: block;
+        & select{
+            background-color: $botones;
+            padding: 1rem;
+        }
     }
 }
 

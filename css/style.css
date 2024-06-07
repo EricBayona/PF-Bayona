@@ -60,13 +60,14 @@ header {
   padding: 0.6rem 0.9rem;
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
+  cursor: pointer;
 }
 
 .contenedorNav nav ul {
   display: flex;
   list-style: none;
+  cursor: pointer;
 }
-
 .contenedorNav nav ul li {
   text-decoration: none;
   margin-left: 2rem;
@@ -77,7 +78,6 @@ header {
   font-size: 1.1rem;
   color: var(--colorText);
 }
-
 .liNav select {
   border: none;
   font-size: 1.1rem;
@@ -86,8 +86,7 @@ header {
 .navResponsive {
   display: none;
 }
-
-.navResponsive:hover {
+.navResponsive .navResponsive:hover {
   padding-left: 7rem;
   background-color: #fff;
   border-radius: 18px 18px 0 0;
@@ -114,20 +113,17 @@ header {
   margin: 0 auto;
   overflow: hidden;
 }
-
 .contenedorBanners ul {
   display: flex;
   padding: 0;
   width: 300%;
   animation: movimiento 20s alternate infinite ease-in-out;
 }
-
 .contenedorBanners li {
   width: 100%;
   list-style: none;
   position: relative;
 }
-
 .contenedorBanners img {
   width: 100%;
 }
@@ -167,23 +163,19 @@ header {
 .itenOfertas {
   margin: 0 auto;
 }
-
-.itenOfertas:hover {
-  filter: brightness(1.3);
-}
-
 .itenOfertas img {
   width: 5rem;
   padding: 1rem 1rem 0 1rem;
 }
-
 .itenOfertas h3 {
   text-align: center;
 }
-
 .itenOfertas h4 {
   text-align: center;
-  color: blue;
+  color: #ffffff;
+}
+.itenOfertas :hover {
+  filter: brightness(1.3);
 }
 
 /* CATEGORIAS */
@@ -208,18 +200,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-1 img {
+  width: 15rem;
+}
+.categoria-1 h2 {
+  padding: 0;
+}
 
 .categoria-1:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-1 img {
-  width: 15rem;
-}
-
-.categoria-1 h2 {
-  padding: 0;
 }
 
 .categoria-2 {
@@ -229,18 +219,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-2 img {
+  width: 15rem;
+}
+.categoria-2 h2 {
+  padding: 0;
+}
 
 .categoria-2:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-2 img {
-  width: 15rem;
-}
-
-.categoria-2 h2 {
-  padding: 0;
 }
 
 .categoria-3 {
@@ -250,18 +238,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-3 img {
+  width: 15rem;
+}
+.categoria-3 h2 {
+  padding: 0;
+}
 
 .categoria-3:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-3 img {
-  width: 15rem;
-}
-
-.categoria-3 h2 {
-  padding: 0;
 }
 
 .categoria-4 {
@@ -271,18 +257,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-4 img {
+  width: 15rem;
+}
+.categoria-4 h2 {
+  padding: 0;
+}
 
 .categoria-4:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-4 img {
-  width: 15rem;
-}
-
-.categoria-4 h2 {
-  padding: 0;
 }
 
 .categoria-5 {
@@ -292,18 +276,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-5 img {
+  width: 15rem;
+}
+.categoria-5 h2 {
+  padding: 0;
+}
 
 .categoria-5:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-5 img {
-  width: 15rem;
-}
-
-.categoria-5 h2 {
-  padding: 0;
 }
 
 .categoria-6 {
@@ -313,18 +295,16 @@ header {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   transition: 200ms;
 }
+.categoria-6 img {
+  width: 15rem;
+}
+.categoria-6 h2 {
+  padding: 0;
+}
 
 .categoria-6:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.categoria-6 img {
-  width: 15rem;
-}
-
-.categoria-6 h2 {
-  padding: 0;
 }
 
 /* FOOTER*/
@@ -391,10 +371,12 @@ footer {
   height: 70vh;
   padding-top: 6rem;
 }
-
 .formulario-acceso-registro input {
   margin-bottom: 1rem;
-  background-color: rgba(230, 117, 24, 0.1725490196);
+  background-color: var(--colorFooter);
+}
+.formulario-acceso-registro h2 {
+  text-align: center;
 }
 
 /* PAGINA CATEGORIAS */
@@ -403,15 +385,24 @@ footer {
 }
 .botones-categorias button {
   margin: 1rem 1rem;
-  padding: 0.2rem;
+  padding: 14px 28px;
   background-color: transparent;
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  color: #fff;
+  font-style: oblique;
+  background-color: #f442dc;
+  border-radius: 5px;
+  border: none;
 }
 .botones-categorias button:hover {
-  background-color: #c243a2;
-  border-radius: 18px;
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.articulosPORSeccion h2 {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .productos-galletas {
@@ -427,6 +418,10 @@ footer {
   width: 8rem;
 }
 
+.btn-responsive-categorias {
+  display: none;
+}
+
 /* PAGINA CONTACTO */
 .imagen-contacto img {
   width: 100%;
@@ -436,7 +431,6 @@ footer {
 .direccion h3 {
   font-size: 2rem;
 }
-
 .direccion h4 {
   display: inline-block;
   padding-right: 1rem;
@@ -458,6 +452,20 @@ footer {
 .contenedor-formulario {
   text-align: center;
   font-size: 1.5rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.contenedor-formulario input {
+  background-color: var(--colorFooter);
+}
+.contenedor-formulario textarea {
+  background-color: var(--colorFooter);
+}
+.contenedor-formulario button {
+  background-color: #f442dc;
+  border-radius: 18px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .contenedorInputs input {
@@ -466,15 +474,15 @@ footer {
   height: 3rem;
   margin-bottom: 1rem;
 }
-
-.contenedorInputs textarea {
+.contenedorInputs input textarea {
   border-radius: 18px;
   width: 100%;
 }
 
 /* PAGINA COMPRAS */
 .main-compras {
-  height: 58vh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 1373px) {
@@ -494,8 +502,6 @@ footer {
   }
   .navResponsive {
     display: block;
-  }
-  .navResponsive {
     padding: 1rem;
   }
   .contenedorCategorias {
@@ -529,6 +535,9 @@ footer {
     padding-left: 0rem;
     width: 7.87rem;
   }
+  .formulario-acceso-registro {
+    width: 100%;
+  }
   .mapaPequeño {
     display: flex;
     margin: 0 auto;
@@ -544,7 +553,14 @@ footer {
     width: 100%;
   }
   .botones-categorias {
-    text-align: start;
+    display: none;
+  }
+  .btn-responsive-categorias {
+    display: block;
+  }
+  .btn-responsive-categorias select {
+    background-color: #f442dc;
+    padding: 1rem;
   }
 }
 
