@@ -520,22 +520,19 @@ footer {
     display: block;
     padding: 1rem;
   }
+  .contenedorCategorias {
+    grid-template-columns: repeat(2, auto);
+  }
+  .contenedorFooter {
+    display: block;
+    text-align: center;
+    padding: 1.5rem 0 1.5rem 0;
+  }
+  .mapa {
+    display: block;
+    text-align: center;
+  }
 }
-.contenedorCategorias {
-  grid-template-columns: repeat(2, auto);
-}
-
-.contenedorFooter {
-  display: block;
-  text-align: center;
-  padding: 1.5rem 0 1.5rem 0;
-}
-
-.mapa {
-  display: block;
-  text-align: center;
-}
-
 @media screen and (max-width: 616px) {
   .contenedorHeader {
     display: block;

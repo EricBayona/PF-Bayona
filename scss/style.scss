@@ -395,7 +395,6 @@ $redes: (
     .navResponsive{
         display: block;
         padding: 1rem;
-    }
     }//pagina categorias
     .contenedorCategorias{
         grid-template-columns: repeat(2,auto);
@@ -411,6 +410,8 @@ $redes: (
         display: block;
         text-align:center;
     }
+    }
+    
    
     
 
