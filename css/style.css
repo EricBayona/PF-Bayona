@@ -506,13 +506,15 @@ footer {
   flex-direction: column;
 }
 
-.aside {
+aside {
   width: 10%;
   padding-top: 10rem;
 }
-.aside img {
+aside img {
   object-fit: cover;
   width: 100%;
+  position: sticky;
+  top: 5rem;
 }
 
 @media screen and (max-width: 1373px) {
@@ -545,9 +547,6 @@ footer {
   .mapa {
     display: block;
     text-align: center;
-  }
-  .aside h2 {
-    display: none;
   }
 }
 @media screen and (max-width: 616px) {
@@ -598,6 +597,16 @@ footer {
   .btn-responsive-categorias select {
     background-color: #039569;
     padding: 1rem;
+  }
+  .ofertasSemana {
+    width: 70%;
+  }
+  aside {
+    width: 15%;
+  }
+  aside img {
+    position: sticky;
+    top: 10rem;
   }
 }
 

@@ -373,12 +373,14 @@ $redes: (
     width: 80%;
     flex-direction: column;
 };
-.aside{
+aside{
     width: 10%;
     padding-top: 10rem;
     & img{
         object-fit: cover;
         width: 100%;
+        position: sticky;
+        top: 5rem;
     }
 }
    
@@ -423,13 +425,7 @@ $redes: (
         display: block;
         text-align:center;
     }
-    // pagina compras
-    .aside{
-        & h2{
-            display: none;
-        }
-    }
-    }
+}
     
    
     
@@ -489,6 +485,17 @@ $redes: (
         & select{
             background-color: $botones;
             padding: 1rem;
+        }
+    }
+    // pagina compras
+    .ofertasSemana{
+        width: 70%;}
+    aside{
+        width: 15%;
+        & img{
+            position: sticky;
+            top: 10rem;
+
         }
     }
 }
