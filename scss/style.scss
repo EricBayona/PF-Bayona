@@ -20,7 +20,7 @@ body{
     --colorFooter:#008B69;
     --colorBorderFooter:#034837;
 }
-main{
+main, aside{
     background-image: radial-gradient(
      ellipse,
          #4d64f8,
@@ -367,8 +367,21 @@ $redes: (
 /* PAGINA COMPRAS */
 .main-compras{
     display: flex;
-    flex-direction: column;
 }
+.ofertasSemana{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+};
+.aside{
+    width: 10%;
+    padding-top: 10rem;
+    & img{
+        object-fit: cover;
+        width: 100%;
+    }
+}
+   
 
 
 
@@ -409,6 +422,12 @@ $redes: (
     .mapa{
         display: block;
         text-align:center;
+    }
+    // pagina compras
+    .aside{
+        & h2{
+            display: none;
+        }
     }
     }
     

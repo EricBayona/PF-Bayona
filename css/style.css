@@ -21,10 +21,10 @@ body {
   --colorBorderFooter:#034837;
 }
 
-main {
+main, aside {
   background-image: radial-gradient(ellipse, #4d64f8, #64FBD2);
 }
-main form {
+main form, aside form {
   background-image: radial-gradient(ellipse, #276466, #329C9F);
 }
 
@@ -498,7 +498,21 @@ footer {
 /* PAGINA COMPRAS */
 .main-compras {
   display: flex;
+}
+
+.ofertasSemana {
+  display: flex;
+  width: 80%;
   flex-direction: column;
+}
+
+.aside {
+  width: 10%;
+  padding-top: 10rem;
+}
+.aside img {
+  object-fit: cover;
+  width: 100%;
 }
 
 @media screen and (max-width: 1373px) {
@@ -531,6 +545,9 @@ footer {
   .mapa {
     display: block;
     text-align: center;
+  }
+  .aside h2 {
+    display: none;
   }
 }
 @media screen and (max-width: 616px) {
