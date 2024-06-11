@@ -367,15 +367,43 @@ $redes: (
 /* PAGINA COMPRAS */
 .main-compras{
     display: flex;
+    min-height: 60vh;
 }
-.ofertasSemana{
-    display: flex;
+.compras{
     width: 80%;
-    flex-direction: column;
+    
+    & .contenedor-compras{
+        display: flex;
+        width: 50%;
+        margin: 2rem auto;
+        justify-content:space-between ;
+        padding: 1rem;
+        border: 2px solid black;
+    }
+    & .compra{
+        display: block;
+        text-align: center;
+        & img{
+            display: block;
+            width: 3rem;
+            padding-top: 0.2rem;
+        }
+        & img:hover{
+            filter: brightness(1);
+            scale: (1.5);
+            transition: 0.25s;
+        }
+        & p{
+            padding-top: 1.5rem
+        }
+    }
 };
+.compra img :hover{
+    filter: brightness(1);
+}
 aside{
     width: 10%;
-    padding-top: 10rem;
+    padding-top: 5rem;
     & img{
         object-fit: cover;
         width: 100%;
@@ -425,6 +453,14 @@ aside{
         display: block;
         text-align:center;
     }
+    //pagina compras
+    .compras{
+        width: 100%;
+        & .contenedor-compras{
+            width: 80%;
+        }
+    }
+    
 }
     
    
@@ -488,15 +524,19 @@ aside{
         }
     }
     // pagina compras
-    .ofertasSemana{
-        width: 70%;}
-    aside{
-        width: 15%;
-        & img{
-            position: sticky;
-            top: 10rem;
-
+    .compras{
+        width: 95%;
+        margin: 0 auto;
+        & .contenedor-compras{
+            width: 100%;
+            padding: 0 ;
+            & .compra h4{
+                font-size: 0.9rem;
+            }
         }
+    }
+    aside{
+        display: none;   
     }
 }
 

@@ -498,17 +498,45 @@ footer {
 /* PAGINA COMPRAS */
 .main-compras {
   display: flex;
+  min-height: 60vh;
 }
 
-.ofertasSemana {
-  display: flex;
+.compras {
   width: 80%;
-  flex-direction: column;
+}
+.compras .contenedor-compras {
+  display: flex;
+  width: 50%;
+  margin: 2rem auto;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid black;
+}
+.compras .compra {
+  display: block;
+  text-align: center;
+}
+.compras .compra img {
+  display: block;
+  width: 3rem;
+  padding-top: 0.2rem;
+}
+.compras .compra img:hover {
+  filter: brightness(1);
+  scale: 1.5;
+  transition: 0.25s;
+}
+.compras .compra p {
+  padding-top: 1.5rem;
+}
+
+.compra img :hover {
+  filter: brightness(1);
 }
 
 aside {
   width: 10%;
-  padding-top: 10rem;
+  padding-top: 5rem;
 }
 aside img {
   object-fit: cover;
@@ -547,6 +575,12 @@ aside img {
   .mapa {
     display: block;
     text-align: center;
+  }
+  .compras {
+    width: 100%;
+  }
+  .compras .contenedor-compras {
+    width: 80%;
   }
 }
 @media screen and (max-width: 616px) {
@@ -598,15 +632,19 @@ aside img {
     background-color: #039569;
     padding: 1rem;
   }
-  .ofertasSemana {
-    width: 70%;
+  .compras {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .compras .contenedor-compras {
+    width: 100%;
+    padding: 0;
+  }
+  .compras .contenedor-compras .compra h4 {
+    font-size: 0.9rem;
   }
   aside {
-    width: 15%;
-  }
-  aside img {
-    position: sticky;
-    top: 10rem;
+    display: none;
   }
 }
 
