@@ -1,0 +1,40 @@
+/* FOOTER*/
+footer{
+    width: 100%;
+    background-color:var(--colorFooter);
+    border: 0.2rem solid var(--colorBorderFooter);
+    font-size: 1rem;
+   
+}
+.datosFooter img{
+    width: 11.4rem;
+    filter: invert(1);
+}
+.contenedorFooter{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+.tituloFooter{
+    padding-top: 1.5rem;
+    padding-bottom: 1.9rem;
+}
+.atributoFooter{
+    padding-bottom: 0.5rem;
+}
+$redes: (
+  twitter: #55acee,
+  facebook: #3a5795,
+  instagram: #bf2498,
+  youtube: rgb(199, 16, 19),
+);
+@each $red, $color in $redes {
+  .btn--bg--#{$red} {
+    background-color: $color;
+    border-radius: 18px;
+    color: #fff;
+    padding: 3px;
+    
+  }
+}
